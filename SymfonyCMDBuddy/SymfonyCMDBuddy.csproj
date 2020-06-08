@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DA0E075-A90C-4BAC-8BD0-9C05BB1B9D16}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SymfonyCMDBuddy</RootNamespace>
+    <AssemblyName>SymfonyCMDBuddy</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="createEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createEntityForm.Designer.cs">
+      <DependentUpon>createEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrudControllerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrudControllerForm.Designer.cs">
+      <DependentUpon>CrudControllerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrudSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrudSettings.Designer.cs">
+      <DependentUpon>CrudSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFieldTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntityFieldTypeForm.Designer.cs">
+      <DependentUpon>EntityFieldTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm.Designer.cs">
+      <DependentUpon>entityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntitySettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntitySettings.Designer.cs">
+      <DependentUpon>EntitySettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="generateBundleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="generateBundleForm.Designer.cs">
+      <DependentUpon>generateBundleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="generateCommandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="generateCommandForm.Designer.cs">
+      <DependentUpon>generateCommandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallSymfonyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallSymfonyForm.Designer.cs">
+      <DependentUpon>InstallSymfonyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newProjectForm.Designer.cs">
+      <DependentUpon>newProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="settingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settingsForm.Designer.cs">
+      <DependentUpon>settingsForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="createEntityForm.resx">
+      <DependentUpon>createEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrudControllerForm.resx">
+      <DependentUpon>CrudControllerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrudSettings.resx">
+      <DependentUpon>CrudSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntityFieldTypeForm.resx">
+      <DependentUpon>EntityFieldTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm.resx">
+      <DependentUpon>entityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntitySettings.resx">
+      <DependentUpon>EntitySettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="generateBundleForm.resx">
+      <DependentUpon>generateBundleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="generateCommandForm.resx">
+      <DependentUpon>generateCommandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallSymfonyForm.resx">
+      <DependentUpon>InstallSymfonyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newProjectForm.resx">
+      <DependentUpon>newProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="settingsForm.resx">
+      <DependentUpon>settingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
