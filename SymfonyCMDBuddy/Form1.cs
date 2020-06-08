@@ -451,18 +451,20 @@ namespace SymfonyCMDBuddy
             }
             else
             {
-                richTextBox1.AppendText(outLine.Data + Environment.NewLine ?? string.Empty);
-                // set the current caret position to the end
-                richTextBox1.SelectionStart = richTextBox1.Text.Length;
-                // scroll it automatically
-                richTextBox1.ScrollToCaret();
+                string text = outLine.Data + Environment.NewLine;
+                displayConsoleColors(text);
             }
         }
 
-        public void setConsoleColors(string consoleLine)
+        public void displayConsoleColors(string consoleLine)
         {
+            Color textColor = Color.Green;
             //see if we can find symfony in the string
-
+            richTextBox1.AppendText(consoleLine, textColor);
+            // set the current caret position to the end
+            richTextBox1.SelectionStart = richTextBox1.Text.Length;
+            // scroll it automatically
+            richTextBox1.ScrollToCaret();
         }
 
         private void cacheResult_Click(object sender, EventArgs e)
@@ -684,6 +686,23 @@ namespace SymfonyCMDBuddy
                 this.callCommand(command, message);
             else
                 this.displayErrorBox(this.rootSetError,this.rootSetErrorTitle);
+        }
+
+        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+    public static class RichTextBoxExtensions
+    {
+        public static void AppendText(this RichTextBox box, string text, Color color)
+        {
+            box.SelectionStart = box.TextLength;
+            box.SelectionLength = 0;
+
+            box.SelectionColor = color;
+            box.AppendText(text);
+            box.SelectionColor = box.ForeColor;
         }
     }
 }
